@@ -18,11 +18,11 @@
 
         <Button  x:Name="Printing" Content="Printing"
             Command="{Binding Command}"
-            Margin="170,426,492,109" RenderTransformOrigin="0.471,1.427"/>
+            Margin="170,426,492,109" RenderTransformOrigin="0.471,1.427" Click="Printing_Click"/>
 
         <Button x:Name="Cancel" Content="Cancel"
             Command="{Binding Command}"
-            Margin="487,426,172,109" RenderTransformOrigin="1.035,0.968"/>
+            Margin="487,426,172,109" RenderTransformOrigin="1.035,0.968" Click="Cancel_Click"/>
 
         <TextBox HorizontalAlignment="Left" Height="220" Margin="10,35,0,0" x:Name="Text"
                  TextWrapping="Wrap" 
@@ -40,5 +40,6 @@
                  RenderTransformOrigin="-0.055,1.17"/>
         <Label  HorizontalAlignment="Left" x:Name="Message"
                Margin="108,382,0,0" VerticalAlignment="Top" Width="352"/>
+        <Label  x:Name="Percentage" HorizontalAlignment="Left" Margin="75,280,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.526,0.385" Width="75"/>
     </Grid>
 </Window>
