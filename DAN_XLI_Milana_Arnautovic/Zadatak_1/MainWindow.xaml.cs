@@ -37,7 +37,11 @@ namespace Zadatak_1
             worker.WorkerSupportsCancellation = true;
 
         }
-
+        /// <summary>
+        /// Method for displaying progress bar work
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             pbStatus.Value = e.ProgressPercentage;
@@ -45,20 +49,24 @@ namespace Zadatak_1
         }
 
 
+        /// <summary>
+        /// A method for calculating performance estimates and creating files
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void worker_DoWork(object sender, DoWorkEventArgs e)
         {
 
-            bool isValid = int.TryParse(number, out int numOfCopies);
-
-
+            bool a = int.TryParse(this.number, out int number);
+            
             int percentage;
             int sum = 0;
 
 
-            for (int i = 1; i <= numOfCopies; i++)
+            for (int i = 1; i <= number; i++)
             {
                 Thread.Sleep(1000);
-                percentage = 100 / numOfCopies;
+                percentage = 100 / number;
                 sum = sum + percentage;
                 worker.ReportProgress(sum);
 
@@ -71,16 +79,23 @@ namespace Zadatak_1
                 }
 
 
-                string path = "../../" + i + "." + DateTime.Now.Day + "_" + DateTime.Now.Month + "_" + DateTime.Now.Year + "_" + DateTime.Now.Hour + "_" + DateTime.Now.Minute + ".txt";
+                string path = "../../" + i + "." + DateTime.Now.Day + "_" + DateTime.Now.Month + "_" + DateTime.Now.Year + "_" + DateTime.Now.Hour + "_" + DateTime.Now.Minute;
 
 
                 File.WriteAllText(path, print);
             }
 
             e.Result = sum;
-        }
+            
 
-        private void bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+
+        }
+        /// <summary>
+        /// Method for displaying result message
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Cancelled)
             {
@@ -95,15 +110,76 @@ namespace Zadatak_1
                 Message.Content = e.Result.ToString();
             }
         }
-
+        /// <summary>
+        /// Method for Printing button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Printing_Click(object sender, RoutedEventArgs e)
         {
 
+            if (!worker.IsBusy)
+            {
+
+                worker.RunWorkerAsync();
+            }
+            else
+            {
+                Message.Content = "Printer is busy, please wait.";
+            }
         }
 
+        /// <summary>
+        /// Method for Cancel button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
+            if (worker.IsBusy)
+            {
 
+                worker.CancelAsync();
+            }
+        }
+
+        /// <summary>
+        /// Method for entering text for printing
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+            TextBox objTextBox = (TextBox)sender;
+            print = objTextBox.Text;
+            if (print != null && number != null)
+            {
+                Printing.IsEnabled = true;
+            }
+        }
+
+        /// <summary>
+        /// Copy number method
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TextChanged_2(object sender, TextChangedEventArgs e)
+        {
+            TextBox objTextBox = (TextBox)sender;
+            number = objTextBox.Text;
+
+            if (print != null && number != null)
+            {
+                if (int.TryParse(number, out int num))
+                {
+                    Printing.IsEnabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Please enter number");
+                }
+            }
         }
     }
-}
+    }
+
