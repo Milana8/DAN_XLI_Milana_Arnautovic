@@ -1,0 +1,15 @@
+C:\Users\panonit\Desktop\DAN_XLI_Milana_Arnautovic\DAN_XLI_Milana_Arnautovic\Zadatak_1\bin\Debug\Zadatak_1.exe.config
+C:\Users\panonit\Desktop\DAN_XLI_Milana_Arnautovic\DAN_XLI_Milana_Arnautovic\Zadatak_1\bin\Debug\Zadatak_1.exe
+C:\Users\panonit\Desktop\DAN_XLI_Milana_Arnautovic\DAN_XLI_Milana_Arnautovic\Zadatak_1\bin\Debug\Zadatak_1.pdb
+C:\Users\panonit\Desktop\DAN_XLI_Milana_Arnautovic\DAN_XLI_Milana_Arnautovic\Zadatak_1\obj\Debug\Zadatak_1.csprojAssemblyReference.cache
+C:\Users\panonit\Desktop\DAN_XLI_Milana_Arnautovic\DAN_XLI_Milana_Arnautovic\Zadatak_1\obj\Debug\MainWindow.g.cs
+C:\Users\panonit\Desktop\DAN_XLI_Milana_Arnautovic\DAN_XLI_Milana_Arnautovic\Zadatak_1\obj\Debug\App.g.cs
+C:\Users\panonit\Desktop\DAN_XLI_Milana_Arnautovic\DAN_XLI_Milana_Arnautovic\Zadatak_1\obj\Debug\Zadatak_1_MarkupCompile.cache
+C:\Users\panonit\Desktop\DAN_XLI_Milana_Arnautovic\DAN_XLI_Milana_Arnautovic\Zadatak_1\obj\Debug\Zadatak_1_MarkupCompile.lref
+C:\Users\panonit\Desktop\DAN_XLI_Milana_Arnautovic\DAN_XLI_Milana_Arnautovic\Zadatak_1\obj\Debug\MainWindow.baml
+C:\Users\panonit\Desktop\DAN_XLI_Milana_Arnautovic\DAN_XLI_Milana_Arnautovic\Zadatak_1\obj\Debug\Zadatak_1.g.resources
+C:\Users\panonit\Desktop\DAN_XLI_Milana_Arnautovic\DAN_XLI_Milana_Arnautovic\Zadatak_1\obj\Debug\Zadatak_1.Properties.Resources.resources
+C:\Users\panonit\Desktop\DAN_XLI_Milana_Arnautovic\DAN_XLI_Milana_Arnautovic\Zadatak_1\obj\Debug\Zadatak_1.csproj.GenerateResource.cache
+C:\Users\panonit\Desktop\DAN_XLI_Milana_Arnautovic\DAN_XLI_Milana_Arnautovic\Zadatak_1\obj\Debug\Zadatak_1.csproj.CoreCompileInputs.cache
+C:\Users\panonit\Desktop\DAN_XLI_Milana_Arnautovic\DAN_XLI_Milana_Arnautovic\Zadatak_1\obj\Debug\Zadatak_1.exe
+C:\Users\panonit\Desktop\DAN_XLI_Milana_Arnautovic\DAN_XLI_Milana_Arnautovic\Zadatak_1\obj\Debug\Zadatak_1.pdb
