@@ -50,7 +50,7 @@ namespace Zadatak_1
 
 
         /// <summary>
-        /// A method for calculating performance estimates and creating files
+        /// Method for calculating the percentage of completion and creating files
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -73,9 +73,10 @@ namespace Zadatak_1
                 if (worker.CancellationPending)
                 {
                     e.Cancel = true;
-
                     worker.ReportProgress(0);
-                    return;
+                                   
+                
+                return;
                 }
 
 
@@ -99,15 +100,15 @@ namespace Zadatak_1
         {
             if (e.Cancelled)
             {
-                Message.Content = "Processing cancelled";
+                Label.Content = "Processing cancelled";
             }
             else if (e.Error != null)
             {
-                Message.Content = e.Error.Message;
+                Label.Content = e.Error.Message;
             }
             else
             {
-                Message.Content = e.Result.ToString();
+                Label.Content = e.Result.ToString();
             }
         }
         /// <summary>
@@ -125,7 +126,7 @@ namespace Zadatak_1
             }
             else
             {
-                Message.Content = "Printer is busy, please wait.";
+                Label.Content = "Printer is busy, please wait.";
             }
         }
 

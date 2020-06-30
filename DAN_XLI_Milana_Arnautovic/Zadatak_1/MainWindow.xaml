@@ -38,7 +38,7 @@
                  Margin="654,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" TextChanged="TextChanged_2"
                  RenderTransformOrigin="-0.055,1.17"/>
 
-        <Label  HorizontalAlignment="Left" x:Name="Message"
+        <Label  HorizontalAlignment="Left" x:Name="Label"
                Margin="108,382,0,0" VerticalAlignment="Top" Width="352"/>
 
         <Label  x:Name="Percentage" HorizontalAlignment="Left" Margin="75,280,0,0" VerticalAlignment="Top"
